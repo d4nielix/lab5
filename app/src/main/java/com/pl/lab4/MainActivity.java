@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity implements TaskFragment.OnLi
 
     @Override
     public void OnListFragmentClickInteraction(TaskListContent.Task task, int position) {
-        
+
     }
 
     @Override

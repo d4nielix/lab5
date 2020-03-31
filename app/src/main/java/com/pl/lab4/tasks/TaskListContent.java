@@ -5,22 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * Helper class for providing sample content for user interfaces created by
- * Android template wizards.
- * <p>
- * TODO: Replace all uses of this class before publishing your app.
- */
 public class TaskListContent {
 
-    /**
-     * An array of sample (dummy) items.
-     */
     public static final List<Task> ITEMS = new ArrayList<Task>();
 
-    /**
-     * A map of sample (dummy) items, by ID.
-     */
     public static final Map<String, Task> ITEM_MAP = new HashMap<String, Task>();
 
     private static final int COUNT = 5;
@@ -50,9 +38,6 @@ public class TaskListContent {
         return builder.toString();
     }
 
-    /**
-     * A dummy item representing a piece of content.
-     */
     public static class Task {
         public final String id;
         public final String title;
