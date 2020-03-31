@@ -2,6 +2,7 @@ package com.pl.lab4;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -18,9 +19,14 @@ public class DeleteDialog extends DialogFragment {
         return new DeleteDialog();
     }
 
+    private void mListenerSetter(Context context){
+        mListener = (OnDeleteDialogInteractionListener) context;
+    }
+
     @NotNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState){
+        mListenerSetter(getContext());
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         builder.setMessage(getString(R.string.delete_question));
         builder.setPositiveButton(getString(R.string.dialog_confirm), new DialogInterface.OnClickListener() {

@@ -14,10 +14,10 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="textview">TextView</string>
-    <string name="item_selected_msg">KURWA DZIAŁA XD</string>
+    <string name="item_selected_msg">Item selected</string>
     <string name="delete_question">Are you sure to delete this one?</string>
-    <string name="dialog_confirm">confirm</string>
-    <string name="dialog_cancel">cancel</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_cancel">Cancel</string>
     <string name="long_click_msg">long click msg</string>
     <string name="delete_cancel_msg">delete cancel msg</string>
     <string name="retry_msg">retry msg</string>
