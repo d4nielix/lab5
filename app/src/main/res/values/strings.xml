@@ -11,4 +11,15 @@
         <item>drawable 2</item>
         <item>drawable 3</item>
     </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textview">TextView</string>
+    <string name="item_selected_msg">KURWA DZIAŁA XD</string>
+    <string name="delete_question">Are you sure to delete this one?</string>
+    <string name="dialog_confirm">confirm</string>
+    <string name="dialog_cancel">cancel</string>
+    <string name="long_click_msg">long click msg</string>
+    <string name="delete_cancel_msg">delete cancel msg</string>
+    <string name="retry_msg">retry msg</string>
+    <string name="delete_dialog_tag">delete dialog tag</string>
 </resources>

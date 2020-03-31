@@ -31,14 +31,6 @@ public class TaskFragment extends Fragment {
         return fragment;
     }
 
-//    @Override
-//    public void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//
-//        if (getArguments() != null) {
-//            mColumnCount = getArguments().getInt(ARG_COLUMN_COUNT);
-//        }
-//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,7 +69,6 @@ public class TaskFragment extends Fragment {
     }
 
     public interface OnListFragmentClickInteractionListener {
-        // TODO: Update argument type and name
         void OnListFragmentClickInteraction(TaskListContent.Task task, int position);
         void OnListFragmentLongClickInteraction(int position);
     }

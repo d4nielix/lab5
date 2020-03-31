@@ -1,5 +1,8 @@
 package com.pl.lab4.tasks;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +17,6 @@ public class TaskListContent {
     private static final int COUNT = 5;
 
     static {
-        // Add some sample items.
         for (int i = 1; i <= COUNT; i++) {
             addItem(createDummyItem(i));
         }
@@ -29,6 +31,12 @@ public class TaskListContent {
         return new Task(String.valueOf(position), "Item " + position, makeDetails(position));
     }
 
+    public static void removeItem(int position){
+        String itemId = ITEMS.get(position).id;
+        ITEMS.remove(position);
+        ITEM_MAP.remove(itemId);
+    }
+
     private static String makeDetails(int position) {
         StringBuilder builder = new StringBuilder();
         builder.append("Details about Item: ").append(position);
@@ -38,7 +46,7 @@ public class TaskListContent {
         return builder.toString();
     }
 
-    public static class Task {
+    public static class Task implements Parcelable {
         public final String id;
         public final String title;
         public final String details;
@@ -58,6 +66,37 @@ public class TaskListContent {
             this.picPath = picPath;
         }
 
+        protected Task(Parcel in) {
+            id = in.readString();
+            title = in.readString();
+            details = in.readString();
+            picPath = in.readString();
+        }
+
+        public static final Creator<Task> CREATOR = new Creator<Task>() {
+            @Override
+            public Task createFromParcel(Parcel in) {
+                return new Task(in);
+            }
+
+            @Override
+            public Task[] newArray(int size) {
+                return new Task[size];
+            }
+        };
+
+        @Override
+        public int describeContents() {
+            return 0;
+        }
+
+        @Override
+        public void writeToParcel(Parcel dest, int flags) {
+            dest.writeString(id);
+            dest.writeString(title);
+            dest.writeString(details);
+            dest.writeString(picPath);
+        }
 
 //        @Override
 //        public String toString() {
