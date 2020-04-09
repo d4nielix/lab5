@@ -22,4 +22,9 @@
     <string name="delete_cancel_msg">delete cancel msg</string>
     <string name="retry_msg">retry msg</string>
     <string name="delete_dialog_tag">delete dialog tag</string>
+
+    <string name="myFileprovider">com.pl.lab4.fileprovider</string>
+    <string name="prefs">PREFS</string>
+    <string name="text">TEXT</string>
+    <string name="json">JSON</string>
 </resources>

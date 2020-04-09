@@ -50,7 +50,7 @@ public class TaskListContent {
         public final String id;
         public final String title;
         public final String details;
-        public final String picPath;
+        public String picPath;
 
         public Task(String id, String title, String details){
             this.id = id;
@@ -102,5 +102,14 @@ public class TaskListContent {
 //        public String toString() {
 //            return content;
 //        }
+
+        public void setPicPath(String path){
+            this.picPath = path;
+        }
+    }
+
+    public static void clearList(){
+        ITEMS.clear();
+        ITEM_MAP.clear();
     }
 }
