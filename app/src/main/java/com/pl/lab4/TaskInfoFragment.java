@@ -97,13 +97,13 @@ public class TaskInfoFragment extends Fragment implements View.OnClickListener{
     public void onActivityCreated(@Nullable Bundle savedInstanceStates){
         super.onActivityCreated(savedInstanceStates);
         Intent intent = getActivity().getIntent();
+        getActivity().findViewById(R.id.displayFragment).setVisibility(View.INVISIBLE);
         if(intent != null){
             TaskListContent.Task receivedTask = intent.getParcelableExtra(MainActivity.taskExtra);
             if(receivedTask != null){
                 displayTask(receivedTask);
             }
         }
-        getActivity().findViewById(R.id.displayFragment).setVisibility(View.INVISIBLE);
         getActivity().findViewById(R.id.taskInfoImage).setOnClickListener(this);
     }
 
